@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(21, 32, 43);
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(29, 161, 242);
+}
+
+ul{
+    list-style: none;
+}
+
+svg{
+    height: 1.75rem;
+}

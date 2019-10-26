@@ -2,7 +2,3 @@
     display: grid;
     grid-template-columns: 2fr 5fr 3fr;
 }
-
-.grid-item{
-    padding: 10px;
-}

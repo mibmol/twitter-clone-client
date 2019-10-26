@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FeedComponent } from './options/home/feed/feed.component';
-import { NotificationsComponent } from './options/notifications/notifications.component';
+import { NotificationsComponent } from './components/options/notifications/notifications.component';
+import { HomeComponent } from './components/options/home/home.component';
 
 
 const routes: Routes = [
-    {path: 'feed', component: FeedComponent},
+    {path: '', component: HomeComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'notifications', component: NotificationsComponent}
 ];
 

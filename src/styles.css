@@ -1,5 +1,7 @@
 body{
     background-color: rgb(21, 32, 43);
+    width: 90%;
+    margin: 0 auto;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -7,16 +9,66 @@ a{
     text-decoration: none;
     color: white;
     font-weight: bold;
+    outline: 0;
 }
 
-a:hover{
-    color: rgb(29, 161, 242);
+span{
+    font-size: 14pt;
 }
+
 
 ul{
     list-style: none;
 }
 
-svg{
+svg {
     height: 1.75rem;
+    fill: white;
+}
+
+.ml{
+    margin-left: 10px;
+}
+
+.mr{
+    margin-right: 10px;
+}
+
+.cv{
+    margin: auto 10px;
+}
+
+.flex-row-c{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+}
+
+.large-font{
+    font-size: 15pt;
+}
+
+
+.border-line{
+    border: 1px solid rgb(56, 68, 77);
+    border-top: none;
+}
+
+.border-bottom-line{
+    border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.tw{
+    color: white;
+}
+
+.twb{
+    color: white;
+    font-weight: bold;
+}
+
+
+.pd20{
+    padding: 20px;
 }

@@ -1,0 +1,57 @@
+.options-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.option-menu{
+    padding: 10px;
+}
+
+.option-menu-item{
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 1000px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
+
+.option-menu-item a{
+    font-size: 15pt;
+    display: flex;
+    flex-direction: row;
+}
+
+.option-menu-item:hover *{
+    color: rgb(29, 161, 242);
+    fill: rgb(29, 161, 242);
+}
+
+
+.option-menu-item:hover 
+{
+    background-color: rgb(29, 161, 242, 0.1);
+}
+
+.pd-l{
+    padding-left: 25px;
+}
+
+
+.xxx{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+}
+.xxx:hover{
+    background-color: rgb(29, 161, 242, 0.1);
+}
+
+

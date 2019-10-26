@@ -1,0 +1,28 @@
+<div class="post-tweet-container">
+    <div class="profile">
+        <img class="rounded" src="/assets/elextasisstanateresa.jpg" alt="">
+    </div>
+    <div class="editor">
+        <div class="text-input">
+            <textarea type="text" 
+                name="text" 
+                id="text-input" 
+                maxlength="240"
+                placeholder="What's happening?"
+                [(ngModel)]="text_input"
+                (ngModelChange)="update_indicator()"></textarea>
+        </div>
+        <div class="actions">
+            <div class="options">
+            </div>
+            <div class="submit-options">
+                <canvas #indicator width="30" height="30"></canvas>
+                <div class="submit">
+                    <button 
+                        class="post-tweet-button"
+                        (click)="post_tweet()">Tweet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

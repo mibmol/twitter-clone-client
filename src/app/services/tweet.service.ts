@@ -11,12 +11,10 @@ export class TweetService{
 
     post_tweet(tweet: any){
         this._feed_tweets.push(tweet)
+        return this.http.post("", {})
     }
 
     load_tweets(){
-        this._feed_tweets.push({
-            text: "fake tweet"
-        })
     }
 
 

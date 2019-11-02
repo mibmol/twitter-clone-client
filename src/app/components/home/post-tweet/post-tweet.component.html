@@ -19,6 +19,8 @@
                 <canvas #indicator width="30" height="30"></canvas>
                 <div class="submit">
                     <button 
+                        [class.disabled]="!enabled"
+                        [class.pointer]="enabled"
                         class="post-tweet-button"
                         (click)="post_tweet()">Tweet</button>
                 </div>

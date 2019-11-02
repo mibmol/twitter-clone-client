@@ -9,6 +9,7 @@ import { TweetService } from 'src/app/services/tweet.service';
 export class PostTweetComponent implements OnInit {
 
     text_input: string = '';
+    enabled: boolean = true
 
     @ViewChild('indicator', { static: true })
     private indicator_canvas: ElementRef<HTMLCanvasElement>
@@ -20,7 +21,7 @@ export class PostTweetComponent implements OnInit {
         private tweet_service: TweetService
     ) { }
 
-    
+
     ngOnInit() {
         this.ctx = this.indicator_canvas.nativeElement.getContext('2d')
         this.ctx.lineWidth = 3
@@ -28,16 +29,26 @@ export class PostTweetComponent implements OnInit {
 
     }
 
-    post_tweet(){
+    post_tweet() {
+        this.enabled = false
         this.tweet_service.post_tweet({
             text: this.text_input
-        })
+        }).subscribe(
+            r => {
+                this.text_input = ""
+                this.enabled = true
+            },
+            error => {
+                this.text_input = ""
+                this.enabled = true
+            }
+        )
     }
 
 
     update_indicator() {
 
-        if(this.text_input.length >= 240){
+        if (this.text_input.length >= 240) {
             this.text_input = this.text_input.substring(0, 240)
             return
         }
@@ -66,7 +77,7 @@ export class PostTweetComponent implements OnInit {
         this.ctx.strokeStyle = "rgb(29, 161, 242)";
 
         let start = 0 - Math.PI / 2
-        let end = (this.text_input.length / 240) * Math.PI*2 - Math.PI / 2
+        let end = (this.text_input.length / 240) * Math.PI * 2 - Math.PI / 2
         let counter_clock_wise = false
 
         this.ctx.arc(14, 14, 12, start, end, counter_clock_wise)

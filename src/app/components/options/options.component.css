@@ -19,9 +19,12 @@
 }
 
 .option-menu-item a{
-    font-size: 15pt;
     display: flex;
     flex-direction: row;
+}
+
+.option-menu-item span{
+    font-size: 14pt;
 }
 
 .option-menu-item:hover *{

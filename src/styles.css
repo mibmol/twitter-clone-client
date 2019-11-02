@@ -1,3 +1,10 @@
+*:focus{
+    outline: none;
+}
+*:active{
+    outline: none;
+}
+
 body{
     background-color: rgb(21, 32, 43);
     width: 90%;
@@ -71,4 +78,17 @@ svg {
 
 .pd20{
     padding: 20px;
+}
+
+.divider{
+    height: 8px;
+    background-color: rgb(37, 51, 65);
+}
+
+
+
+.rounded{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
 }

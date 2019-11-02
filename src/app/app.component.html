@@ -1,4 +1,14 @@
 <div class="home-container">
+    <ng-container *ngIf="!logged">
+        <form action="/auth/login" method="post"></form><input type="hidden" name="_csrf" />
+        <fieldset>
+            <div class="clearfix field"><input type="text" name="username" autocomplete="on" value=""
+                    placeholder="Phone, email or username" /></div>
+            <div class="clearfix field"><input class="js-password-field" type="password" name="password"
+                    placeholder="Password" /></div>
+        </fieldset>
+        <fieldset><button class="EdgeButton" type="submit">Log in</button></fieldset>
+    </ng-container>
     <div class="grid-item">
         <app-options></app-options>
     </div>
@@ -6,6 +16,6 @@
         <router-outlet></router-outlet>
     </div>
     <div class="grid-item">
-        <p>xxx</p>
+        <p></p>
     </div>
 </div>

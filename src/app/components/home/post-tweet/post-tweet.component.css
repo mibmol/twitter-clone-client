@@ -1,0 +1,76 @@
+.post-tweet-container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#text-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.submit-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.indicator {
+    margin: auto 0px;
+}
+
+canvas{
+    margin: auto 0px;
+}
+
+
+.post-tweet-button {
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 100px;
+}
+.post-tweet-button:hover{
+    background-color: rgb(25, 143, 216);
+    color: rgb(228, 228, 228);
+}
+.post-tweet-button:focus,
+.post-tweet-button:active{
+    outline: none;
+    outline: 0;
+    outline-style: none;
+}
+
+.post-tweet-button:focus,
+.post-tweet-button:active{
+    outline: none;
+    -moz-outline: 0;
+    -ms-outline:0;
+    -o-outline: 0;
+    -webkit-outline: 0;
+}
+
+
+.post-tweet-button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  
+
+.pointer{
+    cursor: pointer;
+}

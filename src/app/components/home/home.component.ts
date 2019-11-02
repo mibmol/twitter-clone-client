@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.tweet_service.load_tweets()
   }
 
 }

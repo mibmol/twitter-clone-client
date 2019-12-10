@@ -4,6 +4,13 @@
     padding: 10px;
 }
 
+.tweet:hover{
+    cursor: pointer;
+    background-color: rgb(25,39,52);
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+}
+
 .title{
     cursor: pointer;
 }
@@ -35,12 +42,12 @@
 .options{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-right: 50px;
 }
 
 .options div{
     cursor: pointer;
-    padding: 3px 6px;
     padding-top: 8px;
     border-radius: 200px;
     transition-property: background-color, box-shadow;

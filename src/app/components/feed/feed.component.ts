@@ -7,8 +7,7 @@ import { TweetService } from 'src/app/services/tweet.service';
     styleUrls: ['./feed.component.css'],
 })
 export class FeedComponent implements OnInit {
-
-    private feed_tweets: any[] = []
+    
 
     constructor(
         private tweet_service: TweetService
@@ -18,13 +17,15 @@ export class FeedComponent implements OnInit {
         this.tweet_service.feed()
             .subscribe(
                 response => {
-                    this.feed_tweets = response
-                    console.log(this.feed_tweets)
+                    this.tweet_service.feed_tweets = response
                 },
                 error => {
                     console.log(error)
                 }
             )
   }
+
+
+
 
 }

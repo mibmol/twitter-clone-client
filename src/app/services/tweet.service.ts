@@ -5,6 +5,8 @@ import {urls} from './endpoints'
 @Injectable()
 export class TweetService{
 
+    feed_tweets: any[] = []
+
     constructor(
         private http: HttpClient
     ){}

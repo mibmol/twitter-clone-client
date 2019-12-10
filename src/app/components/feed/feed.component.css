@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: auto;
-    grid-gap: 0.5em;
 }
 hr{
     width: 100%;

@@ -34,10 +34,11 @@ export class PostTweetComponent implements OnInit {
         this.tweet_service.feed_post({
             text: this.text_input
         }).subscribe(
-            next => {
+            response => {
                 this.text_input = ""
                 this.enabled = true
                 this.update_indicator()
+                console.log(response)
             },
             error => {
                 this.enabled = true

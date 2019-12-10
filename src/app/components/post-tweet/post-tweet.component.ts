@@ -31,15 +31,15 @@ export class PostTweetComponent implements OnInit {
 
     post_tweet() {
         this.enabled = false
-        this.tweet_service.post_tweet({
+        this.tweet_service.feed_post({
             text: this.text_input
         }).subscribe(
-            r => {
+            next => {
                 this.text_input = ""
                 this.enabled = true
+                this.update_indicator()
             },
             error => {
-                this.text_input = ""
                 this.enabled = true
             }
         )
@@ -59,12 +59,12 @@ export class PostTweetComponent implements OnInit {
             this.indicator_canvas.nativeElement.width,
             this.indicator_canvas.nativeElement.height
         );
-        this.draw_background()
-        this.draw_status()
+        this.draw_indicator_background()
+        this.draw_indicator_status()
     }
 
 
-    draw_background() {
+    draw_indicator_background() {
         this.ctx.beginPath();
         this.ctx.strokeStyle = "rgb(110, 110, 110, 0.4)";
         this.ctx.arc(14, 14, 12, 0, Math.PI * 2, true);
@@ -72,7 +72,7 @@ export class PostTweetComponent implements OnInit {
     }
 
 
-    draw_status() {
+    draw_indicator_status() {
         this.ctx.beginPath()
         this.ctx.strokeStyle = "rgb(29, 161, 242)";
 

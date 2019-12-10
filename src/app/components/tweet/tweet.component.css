@@ -4,15 +4,28 @@
     padding: 10px;
 }
 
-.title a{
-    line-height: 20px;
+.title{
+    cursor: pointer;
 }
 
+.title span{
+    font-size: 15px;
+}
+
+.title > span{
+    margin-right: 5px;
+}
+
+.title.username{
+    color: rgb(136, 153, 166);
+}
+
+
 .tweet-text{
-    line-height: 20px;
+    line-height: 1.3125;
     max-width: 500px;
     color: white;
-    font-size: 1rem;
+    font-size: 15px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;

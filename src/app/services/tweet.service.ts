@@ -1,26 +1,25 @@
 import { Injectable } from "@angular/core";
 import {HttpClient} from '@angular/common/http'
+import {urls} from './endpoints'
 
 @Injectable()
 export class TweetService{
-    private _feed_tweets: any[] = []
 
     constructor(
         private http: HttpClient
     ){}
 
-    post_tweet(tweet: any){
-        this._feed_tweets.push(tweet)
-        return this.http.post("", {})
+
+    feed(){
+        return this.http.get<any>(urls.feed, {
+            withCredentials: true
+        })
     }
 
-    load_tweets(){
-    }
-
-
-
-    get feed_tweets(){
-        return this._feed_tweets
+    feed_post(tweet: any){
+        return this.http.post(urls.feed_post, tweet,{
+            withCredentials: true
+        })
     }
 
 }

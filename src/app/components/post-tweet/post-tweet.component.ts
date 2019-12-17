@@ -39,6 +39,7 @@ export class PostTweetComponent implements OnInit {
                 this.enabled = true
                 this.update_indicator()
                 console.log(response)
+                this.tweet_service.feed_tweets.unshift(response)
             },
             error => {
                 this.enabled = true

@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         this.login_service.login({
-            username: 'miguel1',
+            username: 'miguelps1',
             password: 'xxx1'
         })
         .subscribe(

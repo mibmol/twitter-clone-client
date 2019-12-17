@@ -21,6 +21,8 @@
 .option-menu-item a{
     display: flex;
     flex-direction: row;
+    color: white;
+    font-weight: bold;
 }
 
 .option-menu-item span{

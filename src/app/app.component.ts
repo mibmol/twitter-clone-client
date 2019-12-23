@@ -21,9 +21,16 @@ export class AppComponent implements OnInit {
             password: 'xxx1'
         })
         .subscribe(
-            respose => this.login_service.get_login_info().loggedin = true,
+            respose => {
+                this.login_service.set_user(respose)
+                this.login_service.set_login_status(true)
+            },
             error => console.log(error)
         )
+    }
+
+    get_logged_status(){
+       return this.login_service.get_login_info()
     }
 
 

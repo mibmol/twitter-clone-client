@@ -11,6 +11,11 @@ import { OptionsComponent } from './components/options/options.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileTweetsComponent } from './components/profile/profile-tweets.component';
+import { ProfileTweetsRepliesComponent } from './components/profile/profile-tweets-replies.component';
+import { ProfileLikesComponent } from './components/profile/profile-likes.component';
+import { ProfileMediaComponent } from './components/profile/profile-media.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     OptionsComponent,
     NotificationsComponent,
     HomeComponent,
+    ProfileComponent,
+    ProfileTweetsComponent,
+    ProfileTweetsRepliesComponent,
+    ProfileLikesComponent,
+    ProfileMediaComponent
   ],
   imports: [
     BrowserModule,

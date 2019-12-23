@@ -33,4 +33,12 @@ export class LoginService {
     get_login_info() {
         return this.login_info
     }
+
+    set_login_status(status: boolean){
+        this.login_info.loggedin = status
+    }
+
+    set_user(user: any){
+        this.login_info.user = user
+    }
 }

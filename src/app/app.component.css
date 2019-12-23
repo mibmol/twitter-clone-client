@@ -1,4 +1,4 @@
 .home-container{
     display: grid;
-    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-columns: 2fr 7fr 4fr;
 }

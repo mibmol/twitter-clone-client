@@ -2,7 +2,9 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from '@angular/common/http'
 import { urls } from './endpoints'
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class TweetService {
 
     feed_tweets: any[] = []
@@ -34,6 +36,7 @@ export class TweetService {
         return request
     }
 
+
     feed_new() {
         return this.http.get<any>(urls.feed_new, {
             withCredentials: true,
@@ -43,17 +46,20 @@ export class TweetService {
         })
     }
 
+
     feed_post(tweet: any) {
         return this.http.post(urls.feed_post, tweet, {
             withCredentials: true
         })
     }
 
+
     tweet_fav(tweet: any) {
         return this.http.put(urls.tweet_fav(tweet.id), {}, {
             withCredentials: true
         })
     }
+
 
     tweet_unfav(tweet: any) {
         return this.http.put(urls.tweet_unfav(tweet.id), {}, {
@@ -65,7 +71,30 @@ export class TweetService {
     add_new_tweets(tweets: any[]) {
         this.feed_tweets.unshift(tweets)
     }
+
+
     add_older_tweets(tweets: any[]) {
         this.feed_tweets.push(...tweets)
+    }
+
+
+    user_get_tweets(user_id: number){
+        return this.http.get<any>(urls.user_get_tweets(user_id),{
+            withCredentials: true
+        })
+    }
+
+
+    user_get_tweets_replies(user_id: number){
+        return this.http.get<any>(urls.user_get_tweets_replies(user_id),{
+            withCredentials: true
+        })
+    }
+
+
+    user_get_tweets_faved(user_id: number){
+        return this.http.get<any>(urls.user_get_tweets_faved(user_id),{
+            withCredentials: true
+        })
     }
 }

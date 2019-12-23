@@ -14,6 +14,7 @@ export class FeedComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+ 
         this.tweet_service.feed(false)
             .subscribe(
                 response => {
@@ -25,21 +26,23 @@ export class FeedComponent implements OnInit {
             )
     }
 
+
     @HostListener("window:scroll", [])
-    onReachBottom(){
+    on_reach_bottom(){
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             this.tweet_service.feed(true)
                 .subscribe(
                     res => {
                         this.tweet_service.add_older_tweets(res)
-                        console.log(this.tweet_service)
                     },
                     err => console.log(err)
                 )
         }
     }
 
-
+    get_tweets_feed(){
+        return this.tweet_service.feed_tweets
+    }
 
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-options',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      private loginService: LoginService
+  ) { }
 
   ngOnInit() {
+  }
+
+  user_id(){
+      console.log(this.loginService.get_login_info().user.id)
+      return this.loginService.get_login_info().user.id
   }
 
 }

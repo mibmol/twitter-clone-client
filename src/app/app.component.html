@@ -1,5 +1,5 @@
 <div class="home-container">
-    <ng-container *ngIf="!login_service.get_login_info().loggedin">
+    <ng-container *ngIf="!get_logged_status().loggedin">
         <div>
             <h1>you need to login</h1>
         </div>

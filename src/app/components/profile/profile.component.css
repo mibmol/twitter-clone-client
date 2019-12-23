@@ -1,0 +1,102 @@
+.flex-r{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-c{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    justify-content: left;
+    align-content: center;
+}
+
+.t_cw{
+    color: white;
+}
+
+.t_cg{
+    color: rgb(125, 133, 139)
+}
+
+.t_sm{
+    font-size: 15px;
+}
+
+.t_ss{
+    font-size: 13px;
+}
+
+.t_wb{
+    font-weight: bold;
+}
+
+.header .icon-back{
+    padding: 5px;
+    justify-content: center;
+}
+
+.header svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.header .user-title{
+    padding: 5px;
+}
+
+.user-info{
+    padding: 10px;
+}
+
+.user-name-info{
+    padding: 10px;
+}
+
+.user-joined-info span{
+    padding: 5px;
+    justify-content: center;
+}
+
+.user-joined-info svg{
+    width: 1.5em;
+    height: 1.5em;
+    fill: rgb(125, 133, 139);
+}
+
+.follows-count a:hover{
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+
+
+.ml5{
+    margin-left: 5px;
+}
+
+.ml10{
+    margin-left: 10px;
+}
+
+.ml15{
+    margin-left: 15px;
+}
+
+.activity-info nav{
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.activity-info nav a{
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.activity-info nav a:hover{
+    color: rgb(29, 161, 242);
+    background-color: rgba(29, 161, 242, 0.1);
+    transition-duration: 0.3s;
+}

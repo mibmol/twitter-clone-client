@@ -27,6 +27,7 @@
 
 .option-menu-item span{
     font-size: 14pt;
+    margin-left: 20px;
 }
 
 .option-menu-item:hover *{
@@ -38,6 +39,14 @@
 .option-menu-item:hover 
 {
     background-color: rgb(29, 161, 242, 0.1);
+}
+
+
+.profile-icon-image img{
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    margin-right: 2px;
 }
 
 .pd-l{

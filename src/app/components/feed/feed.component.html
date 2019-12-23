@@ -1,5 +1,5 @@
 <div class="tweets-container">
-    <ng-container *ngFor="let tweet of tweet_service.feed_tweets">
+    <ng-container *ngFor="let tweet of get_tweets_feed()">
         <app-tweet [tweet]=tweet></app-tweet>
         <hr>
     </ng-container>
